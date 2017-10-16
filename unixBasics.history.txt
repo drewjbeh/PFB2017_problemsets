@@ -1,0 +1,120 @@
+   24  wget https://github.com/srobb1/pfb2017/blob/master/files/sequences.nt.fa
+   25  cp ~/Desktop/files/sequences.nt.fa ./
+   26  curl -O https://github.com/srobb1/pfb2017/blob/master/files/sequences.nt.fa
+   27  less sequences.nt.fa 
+   28  curl https://github.com/srobb1/pfb2017/blob/master/files/sequences.nt.fa
+   29  rm sequences.nt.fa 
+   30  cp ~/Desktop/files/sequences.nt.fa 
+   31  cp ~/Desktop/files/sequences.nt.fa ./
+   32  git clone https://github.com/srobb1/pfb2017/blob/master/files/sequences.nt.fa
+   35  wc -l sequences.nt.fa 
+   36  wc -c sequences.nt.fa 
+   37  head sequences.nt.fa 
+   38  head sequences.nt.fa -n 1
+   39  head sequences.nt.fa -n1
+   40  head -n 1 sequences.nt.fa 
+   41  tail -n 3 sequences.nt.fa 
+   42  grep ">" sequences.nt.fa | wc -l
+   43  mv sequences.nt.fa cancer_genes.fasta
+   44  curl -o pfb2017/files/cuffdiff.txt
+   45  curl -O pfb2017/files/cuffdiff.txt
+   46  ls
+   47  curl -O pfb2017/files/cuffdiff.txt
+   48  curl -O https://github.com/srobb1/pfb2017/blob/master/files/cuffdiff.txt
+   49  ls
+   50  cd cuffdiff.txt 
+   51  less cuffdiff.txt 
+   52  rm cuffdiff.txt 
+   53  curl -O http://programmingforbiology.org/problem_sets/files/cuffdiff.txt
+   54  ls
+   55  less cuffdiff.txt 
+   56  wc -l cancer_genes.fasta 
+   57  head cuffdiff.txt 
+   58  man sort
+   59  sort --help
+   60  less cuffdiff.txt 
+   61  sort cuffdiff.txt | less
+   62  sort -k 10 cuffdiff.txt 
+   63  sort -k 10 cuffdiff.txt | less
+   64  man sort
+   65  sort -k 10 -r cuffdiff.txt | less
+   66  sort -k 10 -r cuffdiff.txt > sorted.cuffdiff.out
+   67  head -n 100 sorted.cuffdiff.out > top100.sorted.cuffdiff.out
+   68  sort cuffdiff.txt | awk '{print $1}' | uniq | head -n 100 > differentially.expressed.genes.txt
+   69  less differentially.expressed.genes.txt 
+   70  sort cuffdiff.txt | awk -F '\t' '{print $1}' | uniq | head -n 100 > differentially.expressed.genes.txt
+   71  less differentially.expressed.genes.txt 
+   72  sort -k 1 cuffdiff.txt | awk -F '\t' '{print $1}' | uniq | head -n 100 > differentially.expressed.genes.txt
+   73  less differentially.expressed.genes.txt 
+   74  sort -k 1 cuffdiff.txt | cut -d '\t' -f 1 | uniq | head -n 100 > differentially.expressed.genes.txt
+   75  sort -k 1 cuffdiff.txt | cut -f 1 | uniq | head -n 100 > differentially.expressed.genes.txt
+   76  less differentially.expressed.genes.txt 
+   77  sort -k10 -r cuffdiff.txt | cut -f 10
+   78  sort -k10 -r cuffdiff.txt | cut -f 10 | head
+   79  sort -k10 -r cuffdiff.txt > sorted.cuffdiff.out 
+   80  sort sorted.cuffdiff.out | head -n 100 > top100.sorted.cuffdiff.out 
+   81  cd ~/Desktop/
+   82  mkdir pfb2017
+   83  cd pfb
+   84  cd pfb2017/
+   85  echo "# PFB2017_problemsets" >> README.md
+   86  less README.md 
+   87  cd ..
+   88  git init pfb2017/
+   89  git remote add
+   90  git add pfb2017/README.md 
+   91  less pfb2017/README.md 
+   92  cd pfb2017/
+   93  git add README.md 
+   94  ls
+   95  ls -a
+   96  ls -f
+   97  git commit -m "first commit"
+   98  git config --global --edit
+   99  git remote add origin https://github.com/drewjbeh/PFB2017_problemsets.git
+  100  git push -u origin master
+  101  cp * ~/problemsets/ ./
+  102  ls
+  103  cd ~/problemsets/
+  104  ls
+  105  cpcd ~/Desktop/
+  106  ls
+  107  cd ~/Desktop/
+  108  ls
+  109  cd pfb2017/
+  110  ls
+  111  less README.md 
+  112  cd ~/problemsets/
+  113  cp * ~/Desktop/pfb2017/
+  114  cd ~/Desktop/pfb2017/
+  115  ls
+  116  git add *
+  117  git commit -m "problem set 1 files"
+  118  git push
+  119  ls -al ~/.ssh
+  120  ssh-keygen -t rsa -b 4096 -C "drewjbeh@gmail.com"
+  121  eval "$(ssh-agent -s)"
+  122  vim ~/.ssh/config
+  123  ssh-add -K ~/.ssh/id_rsa
+  124  pwd
+  125  ls
+  126  mkdir files
+  127  mv cancer_genes.fasta files/
+  128  git add files/cancer_genes.fasta 
+  129  git commit -m "add files dir"
+  130  git push
+  131  nano mysequences.txt
+  132  ls
+  133  git add mysequences.txt 
+  134  git commit -m "add mysequences.txt"
+  135  git push
+  136  pwd
+  137  mkdir fastas
+  138  cp files/cancer_genes.fasta fastas/
+  139  ls fastas/
+  140  rm files/cancer_genes.fasta 
+  141  git add all *
+  142  git add *
+  143  git commit -m "changes to file structure"
+  144  git push
+  145  history >> unixBasics.history.txt
