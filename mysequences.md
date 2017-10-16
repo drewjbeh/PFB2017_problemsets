@@ -1,0 +1,5 @@
+This is fasta file format:
+```
+>seqName description
+ATGGCGTCTTGGCCTTAAAAGCTC
+```
