@@ -1,0 +1,10 @@
+#!/usr/bin/env python3
+
+import sys
+
+num = float(sys.argv[1]) # Needs to be float otherwise it remains a str ans is always True
+
+if bool(num):
+   print("This is True")
+else:
+   print("This is False")
