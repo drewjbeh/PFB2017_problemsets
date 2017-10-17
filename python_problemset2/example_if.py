@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# Multiple tests on a number from arg  
+
 import sys
 
 test_num = float(sys.argv[1])
