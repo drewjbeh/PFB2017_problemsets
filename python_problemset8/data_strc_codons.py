@@ -15,10 +15,11 @@ try:
       raise ValueError("Not a valid file")
    file = open(file,'r')
 
-   output = open('Python_08.codons-frame-1.nt','w')
+   output = open('Python_08.codons-3frames.nt','w')
    seq_dict = {}
    full_seq = ''
    seq_name = ''
+   codons = {}
 
    for line in file:
       if line.startswith(">"):
@@ -31,10 +32,15 @@ try:
             raise NotValidSeq("Invalid sequence")
          
    for seq in seq_dict:
-      codons = re.findall(r".{3}", seq_dict[seq])
+      codons["frame-1-codons"] = re.findall(r".{3}", seq_dict[seq])
+      seq_dict[seq] = seq_dict[seq][1:len(seq_dict[seq])]
+      codons["frame-2-codons"] = re.findall(r".{3}", seq_dict[seq])
+      seq_dict[seq] = seq_dict[seq][1:len(seq_dict[seq])]
+      codons["frame-3-codons"] = re.findall(r".{3}", seq_dict[seq])
       seq_dict[seq] = codons # Change seq value in dict to list of codons
-      for codon in codons:
-         output.write(">" + seq + "\n" + codon + "\n")
+      for frame in codons:
+         for codon in frame:
+            output.write(">" + seq + frame + "\n" + codon + "\n")
 
    file.close()
    output.close()
