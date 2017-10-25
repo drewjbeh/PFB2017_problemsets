@@ -18,7 +18,6 @@ for file in files:
 
 for match in matched_files:
 	matrix = re.search('qfo_(.+?).txt', match).group(1)
-	print(matrix)
 	curr = open(match,'r')
 	for line in curr:
 		line = line.strip('\n')
@@ -26,4 +25,6 @@ for match in matched_files:
 			line_dict = dict(zip(field_names, line.split('\t')))
 			break
 	big_dict[matrix] = line_dict
-print(big_dict)
+
+for item in big_dict:
+	print(item,'\n',big_dict[item]['percid'],big_dict[item]['alen'],big_dict[item]['evalue'])
